@@ -1,0 +1,9 @@
+# Objective 5
+market_volatility = df.groupby('Market')['Modal_x0020_Price'].std().sort_values(ascending=False)
+plt.figure(figsize=(12, 6))
+market_volatility[:10].plot(kind='bar', color='orange')
+plt.xlabel('Market')
+plt.ylabel('Price Volatility (Std Dev)')
+plt.title('Top 10 Markets with Highest Price Variations')
+plt.xticks(rotation=90)
+plt.show()
