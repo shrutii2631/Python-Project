@@ -1,0 +1,9 @@
+# Objective 2
+commodity_counts = df['Commodity'].value_counts(normalize=True) * 100
+plt.figure(figsize=(12, 6))
+commodity_counts[:10].plot(kind='bar', color='skyblue')
+plt.xlabel('Commodity')
+plt.ylabel('Percentage of Total Trade')
+plt.title('Proportion of Different Commodities Traded')
+plt.xticks(rotation=90)
+plt.show()
