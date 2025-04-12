@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv("C:/Users/asus/Downloads/INT375.csv")
+df.columns = df.columns.str.replace("_x0020_", "_")
+df['Arrival_Date'] = pd.to_datetime(df['Arrival_Date'], dayfirst=True)
+print(df.info())
+print(df.describe())
