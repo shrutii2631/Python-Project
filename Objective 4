@@ -1,0 +1,16 @@
+# Objective 4
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+state_prices = df.groupby('State')['Modal_x0020_Price'].mean().reset_index().sort_values(by='Modal_x0020_Price')
+
+# Plot
+plt.figure(figsize=(12, 6))
+sns.barplot(data=state_prices, x='State', y='Modal_x0020_Price', hue='State', palette='coolwarm', dodge=False, legend=False)
+plt.xticks(rotation=90)
+plt.xlabel('State')
+plt.ylabel('Average Modal Price')
+plt.title('State-Wise Commodity Price Distribution')
+plt.tight_layout()
+plt.show()
