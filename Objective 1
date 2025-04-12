@@ -1,0 +1,13 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Objective 1
+daily_counts = df.groupby('Arrival_Date').size()
+plt.figure(figsize=(12, 6))
+plt.plot(daily_counts, marker='o', linestyle='-', color='b')
+plt.xlabel('Date')
+plt.ylabel('Total Records')
+plt.title('Total Daily Recorded Prices Over Time')
+plt.grid()
+plt.show()
